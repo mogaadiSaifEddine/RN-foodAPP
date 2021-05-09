@@ -1,11 +1,13 @@
 import React from 'react';
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
 
 
 
 const MealDetailscreen = ()=>{
-    return()
+    return(<View style= {styles.screen}>
+        <Text>the meal detail screen </Text>
+    </View>)
 }
 
 
@@ -19,3 +21,4 @@ const styles =StyleSheet.create({
         alignItems:'center'
     }
 })
+export default MealDetailscreen

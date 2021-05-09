@@ -5,7 +5,9 @@ import { StyleSheet } from 'react-native'
 
 
 const FiltresScreen = ()=>{
-    return()
+    return(<View style= {styles.screen}>
+        <Text>the filtres screen </Text>
+    </View>)
 }
 
 
@@ -19,3 +21,4 @@ const styles =StyleSheet.create({
         alignItems:'center'
     }
 })
+export default FiltresScreen

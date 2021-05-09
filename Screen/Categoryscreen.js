@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet } from 'react-native'
-
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 
 
 
 const CategoryScreen = ()=>{
-    return()
+    return(<View style= {styles.screen}>
+        <Text>the Categorie screen </Text>
+    </View>)
 }
 
 
@@ -19,3 +20,4 @@ const styles =StyleSheet.create({
         alignItems:'center'
     }
 })
+export default CategoryScreen
