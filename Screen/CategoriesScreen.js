@@ -32,8 +32,9 @@ const styles =StyleSheet.create({
         alignItems:'center'
     }, 
     renderItem : {
-margin : 20 ,
-flex:1
+        flex:1 , 
+        margin : 20
     }
+   
 })
 export default CategoriesScreen

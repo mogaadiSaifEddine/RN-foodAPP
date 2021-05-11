@@ -1,15 +1,36 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View  } from 'react-native'
+import {MEALS} from '../fake-data/Categories'
+import {HeaderButtons, Item }  from   'react-navigation-header-buttons'
+import HeaderButton from './CostumeHeader'
 
 
 
+const MealDetailscreen = (props)=>{ 
+ 
+    const id  = props.navigation.getParam('mealId')
+    const meal = MEALS.find (el =>el.id===id)
+    console.log(meal)
+    return(<
+        View style= {styles.screen}>
+        <Text>{meal.ingredients} </Text>
+<Text>{meal.steps}</Text> 
 
-const MealDetailscreen = ()=>{
-    return(<View style= {styles.screen}>
-        <Text>the meal detail screen </Text>
+
+
     </View>)
 }
 
+MealDetailscreen.navigationOptions=navdata =>{
+    const id  = navdata.navigation.getParam('mealId')
+    const meal = MEALS.find (el =>el.id===id)
+    return({
+        headerRight : ()=><HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item iconName = 'ios-star' title ='starios'/>
+        </HeaderButtons>}
+    )
+    
+}
 
 
 
