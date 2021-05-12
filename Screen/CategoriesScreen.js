@@ -23,14 +23,17 @@ const CategoriesScreen = (props)=>{
 
 
 CategoriesScreen.navigationOptions =(navData)=>{
-
+console.log(navData)
  return  { headerTitle :'Meals Categories' ,
-    headerLeft :<HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item title ='Menu ' iconName='ios-menu' onPress={()=>navData.navigation.toggleDrawer()} />
+    headerLeft :()=><HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item title ='Menu ' iconName        = 'ios-star' onPress={()=>navData.navigation.toggleDrawer()} />
     </HeaderButtons> 
 }
 }
-
+/*
+        headerRight : ()=><HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item iconName = 'ios-star' title ='starios'/>
+        </HeaderButtons> */
 const styles =StyleSheet.create({
     screen : {
         flex:1 , 

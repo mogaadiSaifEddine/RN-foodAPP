@@ -1,8 +1,6 @@
 import React from 'react';
 import { StyleSheet , Text , TouchableHighlight , TouchableNativeFeedback,View  , Platform} from 'react-native'
-import { color } from 'react-native-reanimated';
 const Category =(props)=>{
-    console.log(props.styling)
   
  return(
         <View style={{...props.styling , ...{backgroundColor:props.color} , ...styles.vi}}>

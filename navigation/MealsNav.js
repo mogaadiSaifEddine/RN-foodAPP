@@ -17,7 +17,11 @@ import React from 'react';
 const defaultoptions =  { headerStyle :{
     backgroundColor : Platform.OS==='android' ? 'red' : 'green'
     ,
-}}
+},
+    headertitleStyle : {
+        fontFamily : 'opens-sans-bold'
+    }
+}
 
 
 
@@ -57,7 +61,7 @@ const MealsFavTan=createMaterialBottomTabNavigator(
 const FiltresNav = createStackNavigator({
     
 FiltreS:FiltresScreen
-})
+},{defaultNavigationOptions : defaultoptions})
 
 
 
