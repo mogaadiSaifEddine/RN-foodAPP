@@ -1,4 +1,5 @@
 import React from 'react';
+import DefaultText from './DefaultText'
 import { View, Text ,ImageBackground,StyleSheet ,TouchableOpacity } from 'react-native' 
 const OneMeal = (props) =>{
     const {item}=props
@@ -6,12 +7,12 @@ const OneMeal = (props) =>{
    
     return(
     <TouchableOpacity onPress={props.onSelect}>
-        <Text>{item.title}</Text>
-         <Text>{item.complexity}</Text>
+        <DefaultText>{item.title}</DefaultText>
+         <DefaultText>{item.complexity}</DefaultText>
         <ImageBackground style={styles.img} source={{uri: item.imageUrl}}/>
-        <Text>{item.duration}</Text>
-        <Text>{item.affordability}</Text>
-        <Text>{item.title}</Text>
+        <DefaultText>{item.duration}</DefaultText>
+        <DefaultText>{item.affordability}</DefaultText>
+        <DefaultText>{item.title}</DefaultText>
          
         </TouchableOpacity>)
 }

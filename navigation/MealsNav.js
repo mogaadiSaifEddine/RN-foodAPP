@@ -1,4 +1,4 @@
-import { Platform } from 'react-native'
+import { Platform ,Text} from 'react-native'
 import { createAppContainer } from 'react-navigation'
  import { createDrawerNavigator } from 'react-navigation-drawer';
 
@@ -18,9 +18,14 @@ const defaultoptions =  { headerStyle :{
     backgroundColor : Platform.OS==='android' ? 'red' : 'green'
     ,
 },
-    headertitleStyle : {
-        fontFamily : 'opens-sans-bold'
+    headerTitleStyle : {
+        fontFamily : 'opens-sans' ,
+      
+    }, 
+    headerBackTitleStyle :{
+        fontFamily : 'open-sans-bold'
     }
+    
 }
 
 
@@ -47,13 +52,17 @@ const MealsFavTan=createMaterialBottomTabNavigator(
         tabBarIcon : (ico)=>{
             return <Ionicons name = 'ios-restaurant' color={ico.activeColor}/>
         }
+    ,tabBarColor : 'blue',
+    tabBarLabel :Platform.os==='android' ? <Text style={{fontFamily :'sans-serif'}}>Meals</Text> : 'Meals'
 
     }} , 
         Favourite : {screen : FavNavigation  , navigationOptions: {
             
     tabBarIcon : (ico)=>{
         return <Ionicons name = 'ios-star' color={ico.activeColor}/>
-    }
+    } ,tabBarColor : 'blue',
+    tabBarLabel :Platform.os==='android' ? <Text style={{fontFamily :'sans-serif'}}>Meals</Text> : 'Meals'
+
         }} , },{activeColor:'red' ,  barStyle:{backgroundColor : 'white'}, inactiveColor : 'blue',  })
 
 
@@ -61,12 +70,12 @@ const MealsFavTan=createMaterialBottomTabNavigator(
 const FiltresNav = createStackNavigator({
     
 FiltreS:FiltresScreen
-},{defaultNavigationOptions : defaultoptions})
+},{defaultNavigationOptions : defaultoptions,navigationOptions :{drawerLabel :'filtre screen'}})
 
 
 
 const MainNavigator = createDrawerNavigator({
-            MealsFavs : MealsFavTan ,
+            MealsFavs :{screen :  MealsFavTan ,navigationOptions : {drawerLabel :'Meals favorites' }} , 
             Filtrescreen : FiltresNav
-        })
+        }, {contentOptions:{activeTintColor : 'blue' ,activeBackgroundColor : 'red' ,labelstyle :{fontFamily: 'open-sans-bold'}}})
 export default createAppContainer(MainNavigator)

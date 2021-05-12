@@ -1,5 +1,4 @@
 import React ,{useState} from 'react';
-import { moduleName } from 'react-native'
 import {Ionicons} from '@expo/vector-icons'
 import {HeaderButton} from 'react-navigation-header-buttons' 
 const CustomHeaderButton = (props)=>{
@@ -9,5 +8,5 @@ const CustomHeaderButton = (props)=>{
     }
 
 
-    return<HeaderButton {...props} IconComponent={Ionicons} iconSize={23}/> }
+    return<HeaderButton {...props} IconComponent={Ionicons} iconSize={23}  /> }
 export default CustomHeaderButton

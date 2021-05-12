@@ -2,8 +2,9 @@ import React from 'react';
 import {  StyleSheet,Text ,View ,FlatList, TouchableOpacity} from 'react-native'
 import {CATEGORYS}  from '../fake-data/Categories'
 import Categ from '../category/category'
+import HeaderComponent from './CostumeHeader'
 
-import {HeaderButtons ,HeaderButton, Item } from 'react-navigation-header-buttons'
+import {HeaderButtons , Item } from 'react-navigation-header-buttons'
 
 const CategoriesScreen = (props)=>{
     const renderItem=(items)=>{
@@ -25,8 +26,10 @@ const CategoriesScreen = (props)=>{
 CategoriesScreen.navigationOptions =(navData)=>{
 console.log(navData)
  return  { headerTitle :'Meals Categories' ,
-    headerLeft :()=><HeaderButtons HeaderButtonComponent={HeaderButton}>
-        <Item title ='Menu ' iconName        = 'ios-star' onPress={()=>navData.navigation.toggleDrawer()} />
+    headerLeft :()=><HeaderButtons HeaderButtonComponent={
+        HeaderComponent
+    }>
+        <Item title ='Menu ' iconName        = 'ios-menu' onPress={()=>navData.navigation.toggleDrawer()} />
     </HeaderButtons> 
 }
 }

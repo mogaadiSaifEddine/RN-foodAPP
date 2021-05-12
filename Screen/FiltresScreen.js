@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet , View , Text } from 'react-native'
-import {HeaderButtons ,HeaderButton, Item } from 'react-navigation-header-buttons'
+import {HeaderButtons , Item } from 'react-navigation-header-buttons'
+import  HeaderComponent from './CostumeHeader'
 
 
 
@@ -15,9 +16,11 @@ const FiltresScreen = ()=>{
 FiltresScreen.navigationOptions = (navData)=>{
     return{
 headerTitle :'filtring',
-headerLeft :<HeaderButtons HeaderButtonComponent={HeaderButton}>
-           <Item title ='Menu' iconName='ios-menu' onPress={()=>navData.navigation.toggleDrawer()} />
-       </HeaderButtons> 
+headerLeft :<HeaderButtons HeaderButtonComponent={
+    HeaderComponent
+}>
+    <Item title ='Menu ' iconName        = 'ios-menu' onPress={()=>navData.navigation.toggleDrawer()} />
+</HeaderButtons> 
 } }
 
 
