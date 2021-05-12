@@ -7,8 +7,7 @@ const CustomHeaderButton = (props)=>{
     const setb = ()=>{
         b(!a)
     }
-console.log(a)
 
 
-    return }
+    return<HeaderButton {...props} IconComponent={Ionicons} iconSize={23}/> }
 export default CustomHeaderButton

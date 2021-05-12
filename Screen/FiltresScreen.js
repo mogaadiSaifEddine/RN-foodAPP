@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native'
+import { StyleSheet , View , Text } from 'react-native'
 
 
 
@@ -11,7 +11,9 @@ const FiltresScreen = ()=>{
 }
 
 
-
+FiltresScreen.navigationOptions = {
+headerTitle :'filtring'
+}
 
 
 const styles =StyleSheet.create({

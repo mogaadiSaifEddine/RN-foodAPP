@@ -3,9 +3,7 @@ import { View, Text ,ImageBackground,StyleSheet ,TouchableOpacity } from 'react-
 const OneMeal = (props) =>{
     const {item}=props
     // const mealId= props.navigation.getParam('mealId')
-    console.log(props,'gggg2')
-
-    console.log(item , 'OneCat')
+   
     return(
     <TouchableOpacity onPress={props.onSelect}>
         <Text>{item.title}</Text>

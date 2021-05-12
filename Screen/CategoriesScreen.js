@@ -3,7 +3,7 @@ import {  StyleSheet,Text ,View ,FlatList, TouchableOpacity} from 'react-native'
 import {CATEGORYS}  from '../fake-data/Categories'
 import Categ from '../category/category'
 
-
+import {HeaderButtons ,HeaderButton, Item } from 'react-navigation-header-buttons'
 
 const CategoriesScreen = (props)=>{
     const renderItem=(items)=>{
@@ -22,8 +22,14 @@ const CategoriesScreen = (props)=>{
     
 
 
+CategoriesScreen.navigationOptions =(navData)=>{
 
-
+ return  { headerTitle :'Meals Categories' ,
+    headerLeft :<HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item title ='Menu ' iconName='ios-menu' onPress={()=>navData.navigation.toggleDrawer()} />
+    </HeaderButtons> 
+}
+}
 
 const styles =StyleSheet.create({
     screen : {

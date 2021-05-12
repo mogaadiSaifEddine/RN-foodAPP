@@ -10,7 +10,6 @@ const MealDetailscreen = (props)=>{
  
     const id  = props.navigation.getParam('mealId')
     const meal = MEALS.find (el =>el.id===id)
-    console.log(meal)
     return(<
         View style= {styles.screen}>
         <Text>{meal.ingredients} </Text>
